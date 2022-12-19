@@ -1,0 +1,136 @@
+*{
+	margin:0;
+	padding: 0;
+	border:none; outline: none;
+	font-size: 10px;
+	transition: 0.5s ease-in-out;
+}
+
+:root{
+	--cyan :#98c1d9;
+	--darkblue:#3d5a80;
+	--orange:#ee6c4d;
+	--dark-color:#293241;
+	--light-color:#e0fbfc;
+}
+
+body{
+	background-color: var(--light-color);
+	height: 100vh;
+}
+
+section{
+	height: inherit;
+	display: flex;
+	align-items: center; justify-content: center;
+}
+
+.time-container{
+	width:25rem;
+	height: 25rem;
+	display: flex;
+	align-items: center;justify-content: center;
+}
+.timer{
+	width: 20rem;
+	height: 20rem;
+	background-color: white;
+	border-radius: 50%;
+	display: flex; align-items: center; justify-content: center;
+	z-index: 1000;
+	border:10px solid var(--);
+	position: relative;
+	border:0.2rem solid var(--dark-color);
+}
+.circle{
+	position: absolute;
+	width: 22rem;
+	height: 22rem;
+	background-color: var(--light-color);
+	border-radius: 50%;
+	display: flex; align-items: center; justify-content: center;
+	z-index:10;
+}
+
+
+
+.indicator{
+	position: absolute;
+	width: 24rem;
+	height: 24rem;
+	border-radius: 50%;
+	display: flex;
+
+	background: repeating-conic-gradient(
+		from 0deg,
+		var(--orange) 0deg attr("data-deg"),
+		var(--light-color) attr("data-deg") 360deg
+	)
+
+
+}
+
+.controlls{
+	position: absolute;
+	bottom: 2.5rem;
+	display: flex;
+	gap:1rem;
+}
+.controlls i{
+	font-size: 1.5rem;
+	color: var(--light-color);
+	padding-top: 3px;
+}
+
+.controll-btn{
+	width: 2.8rem; height: 2.8rem;
+	display: flex; align-items: center; justify-content: center;
+	border-radius: 50%;
+	background-color: var(--dark-color);
+	cursor: pointer;
+}
+.controll-btn:hover{
+	background-color: var(--darkblue);
+}
+.controll-btn.active{
+	background-color: white;
+	box-shadow: inset 1px 1px 3px var(--darkblue), inset -1px -1px 3px var(--light-color);
+
+}
+.controll-btn.active i{ 
+	color: var(--darkblue)
+	
+}
+
+
+.timer .time-input{
+	width: 18rem;
+	height: 7rem;
+	font-size: 5rem;
+	border:none;
+	outline: none;
+	text-align: center;
+	color: var(--darkblue);
+}
+
+
+.alert-err{
+	display: none;
+	width:60%; height:1.8rem;
+	text-align: center;
+	color: 1.5rem;padding-top: 0.4rem;
+	position: absolute;
+	box-sizing: border-box;
+	top:4rem;
+	color: red;
+	border-radius: 10px;
+	background-color: #ffb0b4;
+}
+
+.pause-btn{
+	display: none;
+}
+
+.edit-btn{
+	display: block;
+}

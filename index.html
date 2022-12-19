@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Digital timmer</title>
+	<link rel="stylesheet" href="./style.css">
+
+	<!-- bootstrap icon -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+<body>
+	<section>
+		<div class="time-container">
+			<div class="timer">
+
+				<div class="alert-err">
+					Set time first
+				</div>
+
+				<input type="text" name="time" class="time-input" id="time-input" value="00:00" disabled="true">
+
+				<div class="controlls">
+					<button class="controll-btn pause-btn"><i class="bi bi-pause-fill"></i></button>
+					<button class="controll-btn edit-btn"><i class="bi bi-pencil-square"></i></button>
+					<button class="controll-btn start-btn">
+						<i class="bi bi-caret-right-fill"></i>
+					</button>
+
+					
+					
+				</div>
+			</div>
+
+			<div class="circle"></div>
+			<div class="indicator"></div>
+		</div>
+	</section>
+
+
+
+	<script src="./app.js"></script>
+</body>
+</html>
